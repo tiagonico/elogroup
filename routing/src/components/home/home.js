@@ -17,11 +17,11 @@ class Home extends React.Component {
 
             if(senha !== confirmaSenha){
                 alert("A confirmação da senha deve ser igual a senha.")
-                return false
+                return false;
             }
             else if(!regularExpression.test(senha)){
                 alert("A senha deve conter pelo menos uma letra, um número, um caracter especial e no mínimo 8 dígitos.")
-                return false
+                return false;
             }
             
 
