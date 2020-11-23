@@ -1,0 +1,9 @@
+.header-left-container {
+    width: 50%;
+    display: inline-block;
+}
+
+.header-right-container {
+    width: 50%;
+    float: right;
+}

@@ -1,0 +1,32 @@
+.my-container{
+    text-align: center;
+}
+
+.my-paper {
+    display: flex;
+    flex-direction: column;
+    padding: 4% 10%;
+    text-align: center;
+}
+
+.logo{
+    display:block;
+    margin:auto;
+}
+
+.barra{
+    background-color: rgb(20,34,43);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.botaoRegistrar{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.inputRegistrar{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 70%;
+}
