@@ -22,6 +22,7 @@ class Home extends React.Component {
         else {
             this.props.history.push("./verLeads");
         }
+        console.log("aaaaaa")
         
     }
 
