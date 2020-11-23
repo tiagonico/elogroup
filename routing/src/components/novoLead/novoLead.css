@@ -1,9 +1,32 @@
 .header-left-container {
     width: 50%;
-    display: inline-block;
+    float: left;
 }
 
 .header-right-container {
     width: 50%;
     float: right;
+}
+
+.body-left-container {
+    width: 50%;
+    float: left;
+}
+
+.body-right-container {
+    width: 50%;
+    float: right;
+}
+
+.my-table {
+    width: 70%;
+}
+
+.my-margin-top {
+    margin-top: 50px;
+}
+
+.my-table-container {
+    margin-top: 50px;
+    margin-bottom: 20px;
 }

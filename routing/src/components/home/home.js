@@ -1,31 +1,31 @@
 import React from 'react';
 import './home.css'
-import { TextField, Grid, AppBar, Toolbar, Container, Paper, Button,FormControl} from '@material-ui/core'
-import { unstable_renderSubtreeIntoContainer } from 'react-dom';
+import { TextField, Grid, AppBar, Toolbar, Container, Paper, Button, FormControl } from '@material-ui/core'
+
+
 
 class Home extends React.Component {
 
-    
-    
-    render() {
+    routeChange = () => {
+        var regularExpression = new RegExp(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/)
+        var senha = document.getElementById("textSenha").value
+        var confirmaSenha = document.getElementById("textConfirmaSenha").value
 
-        function verificaCampos() {
-
-            var regularExpression = new RegExp(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/)
-            var senha = document.getElementById("textSenha").value
-            var confirmaSenha = document.getElementById("textConfirmaSenha").value
-
-            if(senha !== confirmaSenha){
-                alert("A confirmação da senha deve ser igual a senha.")
-                return false;
-            }
-            else if(!regularExpression.test(senha)){
-                alert("A senha deve conter pelo menos uma letra, um número, um caracter especial e no mínimo 8 dígitos.")
-                return false;
-            }
-            
+        if (senha !== confirmaSenha) {
+            alert("A confirmação da senha deve ser igual a senha.")
 
         }
+        else if (!regularExpression.test(senha)) {
+            alert("A senha deve conter pelo menos uma letra, um número, um caracter especial e no mínimo 8 dígitos.")
+
+        }
+        else {
+            this.props.history.push("./verLeads");
+        }
+        
+    }
+
+    render() {
 
         return (
 
@@ -34,17 +34,14 @@ class Home extends React.Component {
 
                     <Grid>
                         <AppBar position="static">
-                            <Toolbar class="barra">
+                            <Toolbar className="barra">
 
-                                <img class="logo" src="https://elogroup.com.br/wp-content/uploads/2020/09/logo-EloGroup-branco.png" alt="logo"></img>
+                                <img className="logo" src="https://elogroup.com.br/wp-content/uploads/2020/09/logo-EloGroup-branco.png" alt="logo"></img>
                             </Toolbar>
                         </AppBar>
                     </Grid>
-                    <form action="./verLeads" name="form1" id="form1">
-                        <Grid>
-
-
-
+                    <form name="form1" id="form1">
+                        <Grid className="my-margin-top30-bottom30">
                             <Grid>
                                 <TextField required className="inputRegistrar" id="textUsuario" name="textUsuario" label="Usuário" />
                             </Grid>
@@ -54,12 +51,10 @@ class Home extends React.Component {
                             <Grid>
                                 <TextField type="password" required className="inputRegistrar" id="textConfirmaSenha" name="textConfirmaSenha" label="Confirmação Password" />
                             </Grid>
-
-
                         </Grid>
 
                         <FormControl>
-                            <Button onClick={verificaCampos} type="submit" id="my-input" class="MuiButton-root botaoRegistrar">Registrar</Button>
+                            <Button href="#" variant="contained" color="primary" onClick={this.routeChange} type="submit" id="my-input">Registrar</Button>
                         </FormControl>
                     </form>
 

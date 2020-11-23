@@ -1,6 +1,6 @@
 import React from 'react';
 import './verLeads.css'
-import { TextField, Grid, AppBar, Toolbar, Container, Paper, Button } from '@material-ui/core'
+import {  Grid, AppBar, Toolbar, Container, Paper, Button } from '@material-ui/core'
 
 class VerLeads extends React.Component {
     render() {
@@ -12,9 +12,9 @@ class VerLeads extends React.Component {
                     <Grid>
                         <Grid className="header-left-container">
                             <AppBar position="static">
-                                <Toolbar class="barra">
+                                <Toolbar className="barra">
 
-                                    <img class="logo" src="https://elogroup.com.br/wp-content/uploads/2020/09/logo-EloGroup-branco.png" alt="logo"></img>
+                                    <img className="logo" src="https://elogroup.com.br/wp-content/uploads/2020/09/logo-EloGroup-branco.png" alt="logo"></img>
                                 </Toolbar>
                             </AppBar>
                         </Grid>
@@ -25,9 +25,8 @@ class VerLeads extends React.Component {
 
                     <Grid>
 
-                        <a href="/novoLead" >
-                            <Button class="MuiButton-root botaoRegistrar" >Novo Lead</Button>
-                        </a>
+                        
+                        <Button variant="contained" color="primary" href="/novoLead" >Novo Lead</Button>
 
                     </Grid>
 
